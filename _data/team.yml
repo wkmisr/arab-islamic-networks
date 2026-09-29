@@ -13,7 +13,7 @@ members:
   - name: Takao Ito
     affiliation: "Kobe University"
     ja: 伊藤隆郎
-    text: Social and cultural history of Egypt and Syria, 13th to 16th centuries. Collated the digital text of al-Ḍawʾ al-Lāmiʿ against the printed edition and studied networks of Muslim merchants in the 15th century.
+    text: Social and cultural history of Egypt and Syria, 13th to 16th centuries, including networks of Muslim merchants in the 15th century.
   - name: Erina Ota
     affiliation: "The University of Tokyo"
     ja: 太田絵里奈
@@ -25,17 +25,17 @@ members:
   - name: Gen Tsuchiyama
     affiliation: "Ochanomizu Women's University"
     ja: 土山玄
-    text: Text analytics. Uses statistical methods to study authorship and style in literary corpora, and now applies them to networks in Islamic urban societies.
+    text: Text analysis. Applies quantitative methods to textual corpora, and in this project to networks in Islamic urban societies.
   - name: Toru Miura
     affiliation: "Toyo Bunko (The Oriental Library)"
     ja: 三浦徹
     text: Urban social history of the Arab-Islamic world, in particular Damascus. Author of Dynamism in the Urban Society of Damascus (2016); applies digital humanities methods to networks of Syrian scholars.
+
+associates:
   - name: Tomoaki Shinoda
     affiliation: "Tohoku University"
     ja: 篠田知暁
     text: Political and social history of Muslims and Christians in the western Mediterranean. Applies network analysis to Arabic biographical sources to trace how Islamic learning spread over time.
-
-associates:
   - name: Hiroaki Sawa
     affiliation: "The University of Tokyo"
     ja: 澤裕章
