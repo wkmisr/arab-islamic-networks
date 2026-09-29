@@ -15,7 +15,7 @@ The dictionary contains biographies of nearly 14,000 people. Some of its heading
 
 The work is done in batches of about twenty entries. Each batch goes through the same steps.
 
-1. **Preparing the text.** Every entry of the dictionary carries a fixed identifier, so that a record can always be traced back to the exact passage it comes from.
+1. **Preparing the text.** The Arabic text is the digital text published by [OpenITI](https://openiti.org/), collated by members of the project against the printed edition. Every entry carries a fixed identifier, so that a record can always be traced back to the exact passage it comes from.
 2. **Drafting.** An AI model reads the Arabic entry and proposes a structured record: names, dates, places, teachers and students, family, events. The draft is only a proposal.
 3. **Review.** A different AI model checks each draft against the Arabic text, statement by statement, and against the shared identifier lists. It corrects errors, and it marks doubtful readings as uncertain instead of smoothing them over.
 4. **Independent verification.** A further check, run separately from the review and with a different model, looks for what the review missed, such as a person who already has an entry of his own or a wrong identification.
