@@ -1,0 +1,81 @@
+---
+layout: default
+title: Research
+permalink: /research/
+---
+<div class="wrap">
+  <div class="prose" style="padding-bottom:0"><h1>Research</h1>
+  <p>Blog posts, presentations and publications of the project.</p></div>
+
+  <section id="blog">
+    <h2 class="year-head">Blog</h2>
+    {% assign notes = site.notes | sort: "date" | reverse %}
+    {% if notes.size > 0 %}
+    <ul class="log">
+      {% for n in notes %}
+      <li>
+        <div class="margin">
+          <time datetime="{{ n.date | date_to_xmlschema }}">{{ n.date | date: "%-d %b %Y" }}</time>
+          {% if n.topic %}<p>{{ n.topic }}</p>{% endif %}
+        </div>
+        <div>
+          <h3><a href="{{ n.url | relative_url }}">{{ n.title }}</a></h3>
+          <p>{{ n.summary }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty">The first posts are in preparation. Planned topics include how the encoding pipeline was designed and revised, and why linking people and places to Wikidata and GeoNames is harder than it looks.</p>
+    {% endif %}
+  </section>
+
+  <section id="presentations">
+    <h2 class="year-head">Presentations</h2>
+    {% assign talks = site.outputs | where: "type", "presentation" | sort: "date" | reverse %}
+    {% if talks.size > 0 %}
+    <ul class="log">
+      {% for o in talks %}
+      <li>
+        <div class="margin">
+          {% if o.date_label %}{{ o.date_label }}{% else %}<time datetime="{{ o.date | date_to_xmlschema }}">{{ o.date | date: "%-d %b %Y" }}</time>{% endif %}
+          {% if o.status %}<p class="status">{{ o.status }}</p>{% endif %}
+          {% if o.kind %}<p>{{ o.kind }}</p>{% endif %}
+        </div>
+        <div>
+          <h3>{% if o.link %}<a href="{{ o.link }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}</h3>
+          <p>{{ o.speaker }}. {{ o.venue }}.</p>
+          {% if o.summary != "" %}<p>{{ o.summary }}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty">Posters and talks will be listed here.</p>
+    {% endif %}
+  </section>
+
+  <section id="publications">
+    <h2 class="year-head">Publications</h2>
+    {% assign pubs = site.outputs | where: "type", "publication" | sort: "date" | reverse %}
+    {% if pubs.size > 0 %}
+    <ul class="log">
+      {% for o in pubs %}
+      <li>
+        <div class="margin">
+          <time datetime="{{ o.date | date_to_xmlschema }}">{{ o.date | date: "%-d %b %Y" }}</time>
+          {% if o.kind %}<p>{{ o.kind }}</p>{% endif %}
+        </div>
+        <div>
+          <h3>{% if o.link %}<a href="{{ o.link }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}</h3>
+          <p>{{ o.speaker }}. {{ o.venue }}.</p>
+          {% if o.summary != "" %}<p>{{ o.summary }}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="empty">Publications will be listed here as they appear.</p>
+    {% endif %}
+  </section>
+</div>

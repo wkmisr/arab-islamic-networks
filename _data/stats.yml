@@ -1,0 +1,9 @@
+# Edit these numbers after each merge. They appear on the home page.
+as_of: 2026-09-25
+items:
+  - value: "ca. 14,000"
+    label: "people with an entry in the source text"
+  - value: "2,695"
+    label: "records encoded so far (180 of them cross-references)"
+  - value: "B93"
+    label: "latest batch merged"

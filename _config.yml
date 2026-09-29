@@ -1,0 +1,55 @@
+# ---- Site settings -------------------------------------------------------
+title: AINet-DB
+tagline: A prosopographical database of al-Sakhāwī's al-Ḍawʾ al-Lāmiʿ
+description: >-
+  Project log and documentation for AINet-DB, a TEI-XML prosopography of
+  the biographical dictionary al-Ḍawʾ al-Lāmiʿ li-ahl al-qarn al-tāsiʿ.
+lang: en
+
+# ---- Where the site lives ------------------------------------------------
+# If the repository is named <username>.github.io, set baseurl to "".
+# Otherwise set baseurl to "/<repository-name>".
+# The repository is named arab-islamic-networks under the GitHub user wkmisr.
+url: "https://wkmisr.github.io"
+baseurl: "/arab-islamic-networks"
+
+# ---- Author / footer -----------------------------------------------------
+funding: "JSPS KAKENHI Grant Number JP26K00196"
+
+author:
+  name: Wakako Kumakura
+  affiliation: Keio University
+
+# Links shown on the Data page and in the footer. Leave empty ("") to hide.
+links:
+  repository: "https://github.com/wkmisr/AINet-DB-Sakhawi"
+  browser: ""         # public URL of the record browser, if any
+
+# ---- Build ---------------------------------------------------------------
+markdown: kramdown
+permalink: /events/:year-:month-:day/:title/
+timezone: Asia/Tokyo
+future: true   # lets upcoming events (dated in the future) appear
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:name/
+  outputs:
+    output: false
+
+defaults:
+  - scope: {path: "", type: "notes"}
+    values: {layout: "note"}
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - UPDATING_ja.md
+  - vendor
+  - preview

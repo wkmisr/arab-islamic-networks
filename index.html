@@ -1,0 +1,116 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  {% include network.svg %}
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="project-name">Comparative Studies on Arab-Islamic Social Networks Based on Integrated Biographical Databases</p>
+      <h1>What resources built and sustained social networks in the Arabic-speaking world, and how?</h1>
+      <p class="lede">{{ site.title }} turns the great biographical dictionaries of the Mamluk period into one linked, open database, so that the ties between thousands of people, not only the famous ones, can be traced and compared.</p>
+      <p class="actions">
+        <a class="btn primary" href="{{ '/project/' | relative_url }}">About the project</a>
+        <a class="btn" href="{{ '/events/' | relative_url }}">See events</a>
+        {% if site.links.repository != "" %}<a class="btn" href="{{ site.links.repository }}">View on GitHub</a>{% endif %}
+      </p>
+    </div>
+    <figure class="plate">
+      <p class="plate-ar" lang="ar" dir="rtl">الضوء اللامع لأهل القرن التاسع</p>
+      <figcaption><i>al-Ḍawʾ al-Lāmiʿ li-ahl al-qarn al-tāsiʿ</i><br>Shams al-Dīn al-Sakhāwī (d. 902/1497)<br><span>The first source to be encoded</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="wrap">
+  <ul class="stats">
+    {% for s in site.data.stats.items %}
+    <li><span class="value">{{ s.value }}</span><span class="label">{{ s.label }}</span></li>
+    {% endfor %}
+  </ul>
+  <p class="stats-note">Counts as of {{ site.data.stats.as_of | date: "%-d %B %Y" }}.</p>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <h2>Three parts of the project</h2>
+    <div class="parts">
+      <div>
+        <h3>A. Build an integrated database</h3>
+        <p>Encode two major biographical dictionaries, al-Sakhāwī's <i>al-Ḍawʾ al-Lāmiʿ</i> (15th century) and Ibn Ḥajar's <i>al-Durar al-Kāmina</i> (14th century), in TEI-XML, with one identifier system and links to Wikidata, VIAF and GeoNames.</p>
+        <details>
+          <summary>See details</summary>
+          <p><i>al-Ḍawʾ al-Lāmiʿ</i> has 12 volumes and nearly 14,000 people; <i>al-Durar al-Kāmina</i> has 4 volumes and about 6,000. The first year builds a sample of 3,000 people from the first dictionary and drafts the guidelines for identifiers and tagging. The rest of the 15th-century dictionary follows in year two, and the 14th-century dictionary in year three.</p>
+          <p>Chronicles and other sources are consulted when a person or a work cannot otherwise be identified. Existing data from the Mamluk Prosopography Project and the <i>Prosopografía de los ulemas de al-Andalus</i> will be linked under the same identifiers.</p>
+          <p><a href="{{ '/project/#a' | relative_url }}">Read the full description</a></p>
+        </details>
+      </div>
+      <div>
+        <h3>B. Learn how the dictionaries are built</h3>
+        <p>Compare what the sources record across centuries and regions, from Egypt and Syria to al-Andalus, and design a database that other dictionaries can join later.</p>
+        <details>
+          <summary>See details</summary>
+          <p>The amount and kind of information differ between the 14th and 15th centuries and between regions. By studying the geographical and occupational make-up of each dictionary, the project designs a database that can take in further dictionaries. For the comparison with al-Andalus it uses a history of Granada compiled at about the same time.</p>
+          <p><a href="{{ '/project/#b' | relative_url }}">Read the full description</a></p>
+        </details>
+      </div>
+      <div>
+        <h3>C. Analyse and compare social ties</h3>
+        <p>Use life events such as study, appointment, marriage and travel as the unit of evidence, and map ties between people, institutions, offices and places.</p>
+        <details>
+          <summary>See details</summary>
+          <p>Ties between people, between people and institutions, between people and offices, and between people and places are visualised as networks. Measures such as density, centrality and betweenness are used to compare periods and sources, and to ask how the networks of soldiers, scholars, Sufis and merchants relate to the political and social order.</p>
+          <p><a href="{{ '/project/#c' | relative_url }}">Read the full description</a></p>
+        </details>
+      </div>
+    </div>
+    <p class="more"><a href="{{ '/project/' | relative_url }}">The whole project, question to four-year plan</a></p>
+  </div>
+</section>
+
+{% assign latest = site.notes | concat: site.outputs | sort: "date" | reverse %}
+{% if latest.size > 0 %}
+<section class="section">
+  <div class="wrap">
+    <h2>Research updates</h2>
+    <ul class="log">
+      {% for item in latest limit:3 %}
+      <li>
+        <div class="margin">
+          {% if item.date_label %}{{ item.date_label }}{% else %}<time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: "%-d %b %Y" }}</time>{% endif %}
+          {% if item.status %}<p class="status">{{ item.status }}</p>{% endif %}
+          <p>{% if item.type %}{{ item.kind }}{% else %}Blog{% endif %}</p>
+        </div>
+        <div>
+          <h3>{% if item.type %}{{ item.title }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</h3>
+          {% if item.type %}<p>{{ item.speaker }}. {{ item.venue }}.</p>{% elsif item.summary %}<p>{{ item.summary }}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="more"><a href="{{ '/research/' | relative_url }}">Blog, presentations and publications</a></p>
+  </div>
+</section>
+{% endif %}
+
+<section class="section alt">
+  <div class="wrap">
+    <h2>Recent events</h2>
+    <ul class="log">
+      {% for post in site.posts limit:3 %}
+      <li>
+        <div class="margin">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{% if post.date_label %}{{ post.date_label }}{% else %}{{ post.date | date: "%-d %b %Y" }}{% endif %}</time>
+          {% if post.status %}<p class="status">{{ post.status }}</p>{% endif %}
+          {% if post.place %}<p>{{ post.place }}</p>{% endif %}
+        </div>
+        <div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.summary }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="more"><a href="{{ '/events/' | relative_url }}">All events</a></p>
+  </div>
+</section>

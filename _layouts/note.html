@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="wrap entry-page">
+  <aside class="margin" aria-label="Note details">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+    {% if page.author %}<p>{{ page.author }}</p>{% endif %}
+    {% if page.topic %}<p>{{ page.topic }}</p>{% endif %}
+  </aside>
+  <div class="prose">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+    <p class="back"><a href="{{ '/research/#blog' | relative_url }}">Back to the blog</a></p>
+  </div>
+</article>

@@ -1,0 +1,29 @@
+---
+layout: default
+title: Events
+permalink: /events/
+---
+<div class="wrap">
+  <div class="prose" style="padding-bottom:0"><h1>Events</h1>
+  <p>Workshops, seminars and symposia held by the project, newest first.</p></div>
+  {% assign years = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+  {% for y in years %}
+  <h2 class="year-head">{{ y.name }}</h2>
+  <ul class="log">
+    {% for post in y.items %}
+    <li>
+      <div class="margin">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{% if post.date_label %}{{ post.date_label }}{% else %}{{ post.date | date: "%-d %b %Y" }}{% endif %}</time>
+        {% if post.status %}<p class="status">{{ post.status }}</p>{% endif %}
+        {% if post.kind %}<p>{{ post.kind }}</p>{% endif %}
+        {% if post.place %}<p>{{ post.place }}</p>{% endif %}
+      </div>
+      <div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.summary }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>
