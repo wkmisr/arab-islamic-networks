@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/assets/favicon.ico' | relative_url }}" sizes="16x16 32x32 48x48">
+  <link rel="apple-touch-icon" href="{{ '/assets/apple-touch-icon.png' | relative_url }}">
+  {% seo %}
+  {% feed_meta %}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header{% if page.layout == 'home' or page.url == '/' %} on-hero{% endif %}">
+    <div class="wrap bar">
+      <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav aria-label="Main">
+        <a href="{{ '/project/' | relative_url }}"{% if page.url == '/project/' %} aria-current="page"{% endif %}>Project</a>
+        <a href="{{ '/data/' | relative_url }}"{% if page.url == '/data/' %} aria-current="page"{% endif %}>Data</a>
+        <a href="{{ '/team/' | relative_url }}"{% if page.url == '/team/' %} aria-current="page"{% endif %}>Team</a>
+        <a href="{{ '/events/' | relative_url }}"{% if page.url == '/events/' or page.layout == 'post' %} aria-current="page"{% endif %}>Events</a>
+        <a href="{{ '/research/' | relative_url }}"{% if page.url == '/research/' or page.layout == 'note' %} aria-current="page"{% endif %}>Research</a>
+        {% if site.links.repository != "" %}<a class="nav-gh" href="{{ site.links.repository }}">GitHub</a>{% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>{{ site.author.name }}, {{ site.author.affiliation }}.</p>
+      {% if site.funding %}<p>This work is supported by {{ site.funding }}.</p>{% endif %}
+      <p>
+        <a href="{{ '/feed.xml' | relative_url }}">Subscribe to updates</a>
+        {% if site.links.repository != "" %} · <a href="{{ site.links.repository }}">Repository</a>{% endif %}
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
