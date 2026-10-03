@@ -1,9 +1,12 @@
 # Displayed on the Team page. `ja` is not shown; it is there so names can be checked.
+# `orcid` and `academia` are optional: leave "" to show nothing.
 lead:
   name: Wakako Kumakura
   ja: 熊倉和歌子
   role: Principal investigator
   affiliation: Keio University
+  orcid: "https://orcid.org/0009-0006-6848-5296"
+  academia: "https://keio.academia.edu/WakakoKumakura"
   text: >-
     Social and economic history of medieval and early modern Egypt and Syria, with a focus on land tenure,
     irrigation and the transmission of knowledge in the Mamluk and Ottoman periods. Author of a book on
@@ -13,33 +16,47 @@ members:
   - name: Takao Ito
     affiliation: "Kobe University"
     ja: 伊藤隆郎
+    orcid: ""
+    academia: "https://kobe-u.academia.edu/TakaoIto"
     text: Social and cultural history of Egypt and Syria, 13th to 16th centuries, including networks of Muslim merchants in the 15th century.
   - name: Erina Ota
     affiliation: "The University of Tokyo"
     ja: 太田絵里奈
-    text: Prosopography of the civilian elite of Mamluk cities, with al-Ḍawʾ al-Lāmiʿ as her main source. Visualised networks of scholars with RDF and studied teacher–student ties documented by ijāza.
+    orcid: ""
+    academia: "https://tufs.academia.edu/ErinaOtaTsukada"
+    text: Prosopography of the civilian elite of Mamluk cities, with *al-Ḍawʾ al-Lāmiʿ* as her main source. Visualised networks of scholars with RDF and studied teacher–student ties documented by ijāza.
   - name: Jun Ogawa
     affiliation: "The University of Tokyo"
     ja: 小川潤
+    orcid: ""
+    academia: ""
     text: Digital humanities and Linked Open Data. Works on modelling narrative historical sources with temporal context, and convenes the Pelagios Network's Historical People SIG.
   - name: Gen Tsuchiyama
     affiliation: "Ochanomizu University"
     ja: 土山玄
+    orcid: ""
+    academia: ""
     text: Text analysis. Applies quantitative methods to textual corpora, and in this project to networks in Islamic urban societies.
   - name: Toru Miura
     affiliation: "Toyo Bunko (The Oriental Library)"
     ja: 三浦徹
-    text: Urban social history of the Arab-Islamic world, in particular Damascus. Author of Dynamism in the Urban Society of Damascus (2016); applies digital humanities methods to networks of Syrian scholars.
+    orcid: "https://orcid.org/0009-0000-3971-5730"
+    academia: "https://ocha.academia.edu/torumiura"
+    text: Urban social history of the Arab-Islamic world, in particular Damascus. Author of *Dynamism in the Urban Society of Damascus* (2016); applies digital humanities methods to networks of Syrian scholars.
 
 associates:
   - name: Tomoaki Shinoda
     affiliation: "Tohoku University"
     ja: 篠田知暁
-    text: Historian working on Muslim–Christian relations in the early modern western Mediterranean. Applies network analysis to Arabic fahrasa literature to trace how texts and learning were transmitted across generations.
+    orcid: "https://orcid.org/0000-0002-8987-2723"
+    academia: "https://tohoku.academia.edu/TomoakiShinoda"
+    text: Political and social history of Muslims and Christians in the western Mediterranean. Applies network analysis to Arabic biographical sources to trace how Islamic learning spread over time.
   - name: Hiroaki Sawa
-    affiliation: "The University of Tokyo (Ph.D. candidate)"
+    affiliation: "The University of Tokyo"
     ja: 澤裕章
-    text:  History of Islamic Medicine focusing on the Alexandrian Epitome, a medical curriculum translated from Greek, and the attribution of the translator using machine learning.
+    orcid: ""
+    academia: ""
+    text: ""
 
 # Set to true only after the international collaborators have agreed to be named.
 show_collaborators: false
