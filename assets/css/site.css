@@ -164,3 +164,11 @@ details a { font-family: var(--sans); font-size: .92rem; }
 .person-links { margin-top: .4rem !important; font-family: var(--sans); font-size: .85rem; display: flex; gap: 1rem; flex-wrap: wrap; }
 .person-links a { display: inline-flex; align-items: center; gap: .3rem; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); }
 .person-links a:hover { color: var(--lapis); border-color: var(--lapis); }
+
+/* Headings: gold accents so headings stand apart from body text */
+.prose h2, .section > .wrap > h2 { color: var(--night); padding-top: .6rem; position: relative; }
+.prose h2::before, .section > .wrap > h2::before { content: ""; position: absolute; top: 0; left: 0; width: 2.5rem; height: 3px; background: var(--gold-lt); }
+.prose h3 { color: var(--gold); font-size: 1.15rem; font-weight: 600; margin: 1.75rem 0 .4rem; }
+.year-head { color: var(--gold); font-size: 1.3rem; }
+.prose strong { color: var(--night); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prose h2, :root:not([data-theme="light"]) .section > .wrap > h2, :root:not([data-theme="light"]) .prose strong { color: var(--ink); } }
