@@ -9,7 +9,8 @@ permalink: /team/
 <div class="person">
   <p class="person-name">{{ t.lead.name }}</p>
   <p class="person-aff">{{ t.lead.affiliation }}</p>
-  <p class="person-text">{{ t.lead.text }}</p>
+  <div class="person-text">{{ t.lead.text | markdownify }}</div>
+  {% include person-links.html p=t.lead %}
 </div>
 
 ## Co-investigators
@@ -18,7 +19,8 @@ permalink: /team/
 <div class="person">
   <p class="person-name">{{ m.name }}</p>
   {% if m.affiliation != "" %}<p class="person-aff">{{ m.affiliation }}</p>{% endif %}
-  {% if m.text != "" %}<p class="person-text">{{ m.text }}</p>{% endif %}
+  {% if m.text != "" %}<div class="person-text">{{ m.text | markdownify }}</div>{% endif %}
+  {% include person-links.html p=m %}
 </div>
 {% endfor %}
 
@@ -28,7 +30,8 @@ permalink: /team/
 <div class="person">
   <p class="person-name">{{ a.name }}</p>
   {% if a.affiliation != "" %}<p class="person-aff">{{ a.affiliation }}</p>{% endif %}
-  {% if a.text != "" %}<p class="person-text">{{ a.text }}</p>{% endif %}
+  {% if a.text != "" %}<div class="person-text">{{ a.text | markdownify }}</div>{% endif %}
+  {% include person-links.html p=a %}
 </div>
 {% endfor %}
 
@@ -39,7 +42,8 @@ permalink: /team/
 <div class="person">
   <p class="person-name">{{ c.name }}</p>
   <p class="person-aff">{{ c.affiliation }}</p>
-  <p class="person-text">{{ c.text }}</p>
+  <div class="person-text">{{ c.text | markdownify }}</div>
+  {% include person-links.html p=c %}
 </div>
 {% endfor %}
 {% endif %}
