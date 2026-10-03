@@ -160,3 +160,7 @@ details a { font-family: var(--sans); font-size: .92rem; }
 .person-aff { font-family: var(--sans); font-size: .95rem; font-weight: 500; color: var(--gold); margin-top: .15rem !important; }
 .person-text { margin-top: .5rem !important; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .person-name { color: var(--ink); } }
+.person-text p { margin: 0; }
+.person-links { margin-top: .4rem !important; font-family: var(--sans); font-size: .85rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+.person-links a { display: inline-flex; align-items: center; gap: .3rem; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); }
+.person-links a:hover { color: var(--lapis); border-color: var(--lapis); }
