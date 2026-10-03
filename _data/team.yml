@@ -59,12 +59,12 @@ associates:
     academia: "https://tohoku.academia.edu/TomoakiShinoda"
     text: Political and social history of Muslims and Christians in the western Mediterranean. Applies network analysis to Arabic biographical sources to trace how Islamic learning spread over time.
   - name: Hiroaki Sawa
-    affiliation: "The University of Tokyo"
+    affiliation: "The University of Tokyo (Ph.D. candidate)"
     ja: 澤裕章
     researchmap: "https://researchmap.jp/hsawa?lang=en"
     orcid: ""
     academia: ""
-    text: ""
+    text: History of Islamic medicine, focusing on the Alexandrian Epitome, a medical curriculum translated from Greek, and the attribution of its translator using machine learning.
 
 # Set to true only after the international collaborators have agreed to be named.
 show_collaborators: false
