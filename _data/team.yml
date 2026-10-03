@@ -35,11 +35,11 @@ associates:
   - name: Tomoaki Shinoda
     affiliation: "Tohoku University"
     ja: 篠田知暁
-    text: Political and social history of Muslims and Christians in the western Mediterranean. Applies network analysis to Arabic biographical sources to trace how Islamic learning spread over time.
+    text: Historian working on Muslim–Christian relations in the early modern western Mediterranean. Applies network analysis to Arabic fahrasa literature to trace how texts and learning were transmitted across generations.
   - name: Hiroaki Sawa
-    affiliation: "The University of Tokyo"
+    affiliation: "The University of Tokyo (Ph.D. candidate)"
     ja: 澤裕章
-    text: ""
+    text:  History of Islamic Medicine focusing on the Alexandrian Epitome, a medical curriculum translated from Greek, and the attribution of the translator using machine learning.
 
 # Set to true only after the international collaborators have agreed to be named.
 show_collaborators: false
