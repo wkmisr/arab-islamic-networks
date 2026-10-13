@@ -34,14 +34,14 @@ members:
     researchmap: "https://researchmap.jp/jo-fil-ho?lang=en"
     orcid: ""
     academia: ""
-    text: Digital humanities and Linked Open Data. Works on modelling the semantic content of historical sources and historical research processes. He serves as coordinator of the Pelagios Network’s Historical People SIG.
+    text: Digital humanities and Linked Open Data. Works on modelling narrative historical sources with temporal context, and convenes the Pelagios Network's Historical People SIG.
   - name: Gen Tsuchiyama
     affiliation: "Ochanomizu University"
     ja: 土山玄
     researchmap: "https://researchmap.jp/gtsuchiy?lang=en"
     orcid: ""
     academia: ""
-    text: Text analytics. Applies quantitative methods to textual corpora, and in this project to networks in Islamic urban societies.
+    text: Text analysis. Applies quantitative methods to textual corpora, and in this project to networks in Islamic urban societies.
   - name: Toru Miura
     affiliation: "Toyo Bunko (The Oriental Library)"
     ja: 三浦徹
@@ -65,6 +65,22 @@ associates:
     orcid: ""
     academia: ""
     text: History of Islamic medicine, focusing on the Alexandrian Epitome, a medical curriculum translated from Greek, and the attribution of its translator using machine learning.
+
+# Graduate students who do the encoding. Shown as a compact list.
+assistants_intro: "Graduate students who encode the biographical entries and check the records."
+assistants:
+  - name: Rui Nakagawa
+    ja: 中川流衣
+    affiliation: "Hokkaido University (Ph.D. student)"
+  - name: Naoki Umetsu
+    ja: 梅津尚生
+    affiliation: "Hokkaido University (Ph.D. student)"
+  - name: Saeri Kato
+    ja: 加藤さえり
+    affiliation: "Hokkaido University (Master's student)"
+  - name: Sumire Miki
+    ja: 三木すみれ
+    affiliation: "Waseda University (Master's student)"
 
 # Set to true only after the international collaborators have agreed to be named.
 show_collaborators: false
