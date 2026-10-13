@@ -172,3 +172,7 @@ details a { font-family: var(--sans); font-size: .92rem; }
 .year-head { color: var(--gold); font-size: 1.3rem; }
 .prose strong { color: var(--night); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prose h2, :root:not([data-theme="light"]) .section > .wrap > h2, :root:not([data-theme="light"]) .prose strong { color: var(--ink); } }
+.assistants { list-style: none; padding: 0 0 0 1rem; margin: 0 0 1.75rem; border-left: 3px solid var(--gold); }
+.assistants li { margin: 0 0 .6rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .1rem .75rem; }
+.assistants .person-name { font-size: 1.15rem; }
+.assistants .person-aff { margin: 0 !important; }
