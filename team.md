@@ -35,6 +35,15 @@ permalink: /team/
 </div>
 {% endfor %}
 
+{% if t.assistants %}
+## Research assistants
+
+{% if t.assistants_intro %}<p class="assistants-intro">{{ t.assistants_intro }}</p>{% endif %}
+<ul class="assistants">
+{% for r in t.assistants %}  <li><span class="person-name">{{ r.name }}</span> <span class="person-aff">{{ r.affiliation }}</span></li>
+{% endfor %}</ul>
+{% endif %}
+
 {% if t.show_collaborators %}
 ## International collaborators
 
