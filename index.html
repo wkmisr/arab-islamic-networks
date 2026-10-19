@@ -82,7 +82,7 @@ title: Home
           <p>{% if item.type %}{{ item.kind }}{% else %}Blog{% endif %}</p>
         </div>
         <div>
-          <h3>{% if item.type %}{{ item.title }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</h3>
+          <h3>{% if item.type %}{{ item.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</h3>
           {% if item.type %}<p>{{ item.speaker }}. {{ item.venue }}.</p>{% elsif item.summary %}<p>{{ item.summary }}</p>{% endif %}
         </div>
       </li>

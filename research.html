@@ -43,7 +43,7 @@ permalink: /research/
           {% if o.kind %}<p>{{ o.kind }}</p>{% endif %}
         </div>
         <div>
-          <h3>{% if o.link %}<a href="{{ o.link }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}</h3>
+          <h3>{% if o.link %}<a href="{{ o.link }}">{{ o.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>{% else %}{{ o.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</h3>
           <p>{{ o.speaker }}. {{ o.venue }}.</p>
           {% if o.summary != "" %}<p>{{ o.summary }}</p>{% endif %}
         </div>
@@ -67,7 +67,7 @@ permalink: /research/
           {% if o.kind %}<p>{{ o.kind }}</p>{% endif %}
         </div>
         <div>
-          <h3>{% if o.link %}<a href="{{ o.link }}">{{ o.title }}</a>{% else %}{{ o.title }}{% endif %}</h3>
+          <h3>{% if o.link %}<a href="{{ o.link }}">{{ o.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>{% else %}{{ o.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}{% endif %}</h3>
           <p>{{ o.speaker }}. {{ o.venue }}.</p>
           {% if o.summary != "" %}<p>{{ o.summary }}</p>{% endif %}
         </div>
