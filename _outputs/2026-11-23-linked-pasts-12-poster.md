@@ -1,5 +1,5 @@
 ---
-title: "Encoding Arabic Biographical Dictionaries at Scale with AI and Humans in the Loop: The Evolution of a TEI-XML Pipeline for al-Sakhāwī’s al-Ḍawʾ al-Lāmiʿ"
+title: "Encoding Arabic Biographical Dictionaries at Scale with AI and Humans in the Loop: The Evolution of a TEI-XML Pipeline for al-Sakhāwī’s *al-Ḍawʾ al-Lāmiʿ*"
 type: presentation
 kind: "Poster (peer-reviewed)"
 speaker: "Wakako Kumakura"
