@@ -94,7 +94,7 @@ Errors are counted per statement (one relation, one date, one place) instead of 
 
 ## Status and access
 
-As of 26 September 2026, 2,695 records have been reviewed and merged. A further 1,254 drafted records are waiting for review.
+As of 31 October 2026, 3,695 records have been reviewed and merged.
 
 {% if site.links.repository != "" %}All records and project documents are in the [GitHub repository]({{ site.links.repository }}).{% else %}The repository will be linked here once it is public.{% endif %}
 {% if site.links.browser != "" %}The [record browser]({{ site.links.browser }}) lets you search the records and read each biography beside its source text.{% else %}A searchable record browser will be linked here once it is published.{% endif %}
