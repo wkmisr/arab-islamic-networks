@@ -2,8 +2,9 @@
 title: AINet-DB
 tagline: A prosopographical database of al-Sakhāwī's al-Ḍawʾ al-Lāmiʿ
 description: >-
-  Project log and documentation for AINet-DB, a TEI-XML prosopography of
-  the biographical dictionary al-Ḍawʾ al-Lāmiʿ li-ahl al-qarn al-tāsiʿ.
+  AINet-DB is a TEI-XML prosopographical database of al-Sakhāwī's
+  al-Ḍawʾ al-Lāmiʿ (al-Daw al-Lami), the biographical dictionary of nearly
+  14,000 people of 15th-century Mamluk Egypt and Syria.
 lang: en
 
 # ---- Where the site lives ------------------------------------------------
@@ -45,6 +46,7 @@ defaults:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 exclude:
   - Gemfile
